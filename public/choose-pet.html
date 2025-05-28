@@ -3,14 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <title>Choose a Pet</title>
-<link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+    
+    .pet-card {
+      transition: all 0.3s ease;
+      transform-style: preserve-3d;
+    }
+    
+    .pet-card:hover {
+      transform: translateY(-5px) scale(1.03);
+    }
+    
+    .modal-show {
+      opacity: 1 !important;
+      transform: scale(1) !important;
+    }
+    
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
 </head>
-<body>
-  <h2>Choose Your Pet</h2>
-  <div id="petOptions">
-    <button onclick="assignPet('pet1')">Dog</button>
-    <button onclick="assignPet('pet2')">Cat</button>
-    <button onclick="assignPet('pet3')">Bird</button>
+<body class="min-h-screen flex items-center justify-center p-4">
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+    <div class="absolute top-20 left-10 w-16 h-16 rounded-full bg-pink-200 opacity-30 animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-20 w-24 h-24 rounded-full bg-blue-200 opacity-30 animate-pulse"></div>
+    <div class="absolute top-1/3 right-1/4 w-20 h-20 rounded-full bg-yellow-200 opacity-30 animate-pulse"></div>
+  </div>
+
+  <div class="relative z-10 bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-xl max-w-md w-full text-center space-y-8 border border-white/20">
+    <div class="floating">
+      <h1 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500 mb-2">Find Your Perfect Pet</h1>
+      <p class="text-gray-500">Select your companion and begin your journey</p>
+    </div>
+    
+    <div id="petOptions" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <button onclick="assignPet('pet1')" class="pet-card flex flex-col items-center justify-center bg-gradient-to-br from-yellow-100 to-yellow-50 hover:from-yellow-200 hover:to-yellow-100 transition-all p-6 rounded-2xl shadow-md border border-yellow-100">
+        <span class="text-5xl mb-3">🐶</span>
+        <span class="text-lg font-medium text-yellow-800">Dog</span>
+        <span class="text-xs text-yellow-600 mt-1">Loyal & Friendly</span>
+      </button>
+      
+      <button onclick="assignPet('pet2')" class="pet-card flex flex-col items-center justify-center bg-gradient-to-br from-pink-100 to-pink-50 hover:from-pink-200 hover:to-pink-100 transition-all p-6 rounded-2xl shadow-md border border-pink-100">
+        <span class="text-5xl mb-3">🐱</span>
+        <span class="text-lg font-medium text-pink-800">Cat</span>
+        <span class="text-xs text-pink-600 mt-1">Independent & Playful</span>
+      </button>
+      
+      <button onclick="assignPet('pet3')" class="pet-card flex flex-col items-center justify-center bg-gradient-to-br from-blue-100 to-blue-50 hover:from-blue-200 hover:to-blue-100 transition-all p-6 rounded-2xl shadow-md border border-blue-100">
+        <span class="text-5xl mb-3">🐦</span>
+        <span class="text-lg font-medium text-blue-800">Bird</span>
+        <span class="text-xs text-blue-600 mt-1">Cheerful & Social</span>
+      </button>
+    </div>
+    
+    <div class="pt-4">
+      <p class="text-sm text-gray-400">We'll help you find the perfect match for your lifestyle</p>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More | PetGame</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+        }
+        .form-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .pet-icon {
+            transition: all 0.3s ease;
+        }
+        .pet-icon:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-paw text-3xl pet-icon"></i>
+                    <h1 class="text-2xl font-bold">PetGame</h1>
+                </div>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="index.html" class="hover:underline">Home</a></li>
+                   
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- About Section -->
+            <div class="lg:w-1/2">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">About PetGame</h2>
+                <p class="text-gray-600 mb-6 text-lg">
+                    At PetGame, we believe in creating joyful digital experiences that bring people and pets closer together. 
+                    Our mission is to develop fun, engaging games that celebrate the special bond between humans and their furry friends.
+                </p>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Story</h3>
+                    <p class="text-gray-600 mb-4">
+                        Founded in 2020 by a team of pet lovers and game enthusiasts, PetGame started as a small project to help people 
+                        connect with pets virtually. Today, we've grown into a thriving community with thousands of players worldwide.
+                    </p>
+                    <p class="text-gray-600">
+                        Our games combine elements of care, adventure, and education to create unique experiences that both entertain 
+                        and teach players about responsible pet ownership.
+                    </p>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">What We Offer</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Interactive virtual pet experiences</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Educational content about pet care</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Multiplayer pet adventures</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Regular updates with new features</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <div class="bg-blue-100 p-4 rounded-lg flex-1">
+                        <i class="fas fa-heart text-blue-500 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-blue-800">Our Mission</h4>
+                        <p class="text-blue-600 text-sm">To create digital experiences that celebrate the human-pet bond.</p>
+                    </div>
+                    <div class="bg-purple-100 p-4 rounded-lg flex-1">
+                        <i class="fas fa-star text-purple-500 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-purple-800">Our Vision</h4>
+                        <p class="text-purple-600 text-sm">A world where everyone can experience the joy of pets.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Form Section -->
+            <div class="lg:w-1/2">
+                <div class="bg-white rounded-xl p-8 form-shadow">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Get in Touch</h3>
+                    <p class="text-gray-600 mb-6">Want to learn more about our games? Have questions or suggestions? Fill out the form below and we'll get back to you soon!</p>
+                    
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-1">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition" required>
+                        </div>
+                        
+                        <div>
+                            <label for="interest" class="block text-gray-700 font-medium mb-1">I'm interested in</label>
+                            <select id="interest" name="interest" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition">
+                                <option value="game-features">Game Features</option>
+                                <option value="partnership">Partnership Opportunities</option>
+                                <option value="feedback">Providing Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-1">Your Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition"></textarea>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <input type="checkbox" id="newsletter" name="newsletter" class="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded">
+                            <label for="newsletter" class="ml-2 block text-gray-700">Subscribe to our newsletter</label>
+                        </div>
+                        
+                        <button type="submit" class="w-full gradient-bg text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition flex items-center justify-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Send Message
+                        </button>
+                    </form>
+                    
+                    <div id="successMessage" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                        <i class="fas fa-check-circle mr-2"></i> Thank you! Your message has been sent successfully.
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-orange-50 p-6 rounded-xl">
+                    <h4 class="text-xl font-semibold text-orange-800 mb-3">Join Our Community</h4>
+                    <p class="text-orange-600 mb-4">Connect with other pet lovers and stay updated on our latest games!</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-pink-600 text-white p-2 rounded-full hover:bg-pink-700 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-blue-400 text-white p-2 rounded-full hover:bg-blue-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-red-600 text-white p-2 rounded-full hover:bg-red-700 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-paw text-2xl"></i>
+                        <span class="text-xl font-bold">PetGame</span>
+                    </div>
+                    <p class="text-gray-400">Making pet ownership fun and accessible for everyone.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h5 class="text-lg font-semibold mb-4">Company</h5>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">About</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold mb-4">Support</h5>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Help Center</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold mb-4">Connect</h5>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Facebook</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Instagram</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 PetGame. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+          e.preventDefault();
+        
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const interest = document.getElementById('interest').value;
+          const message = document.getElementById('message').value;
+          const newsletter = document.getElementById('newsletter').checked;
+        
+          try {
+            const response = await fetch('http://localhost:3000/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name, email, interest, message, newsletter })
+            });
+        
+            if (response.ok) {
+              document.getElementById('successMessage').classList.remove('hidden');
+              document.getElementById('contactForm').reset();
+            } else {
+              console.error('Failed to send message');
+            }
+          } catch (err) {
+            console.error('Error:', err);
+          }
+        });
+        </script>
+        
+</body>
+</html>
