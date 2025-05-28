@@ -2,13 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h2>Dashboard</h2>
-  <div id="userData"></div>
-  <button onclick="logout()">Logout</button>
+  <div class="dashboard-container">
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h1><i class="fas fa-paw"></i> PetGame</h1>
+      </div>
+      <nav>
+        <ul>
+          <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+          <li><a href="#"><i class="fas fa-heart"></i> Pet Care</a></li>
+          <li><a href="#"><i class="fas fa-chart-line"></i> Statistics</a></li>
+          <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <button onclick="logout()" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <h2>Welcome Back!</h2>
+        <div class="user-profile">
+          <span id="username-display">User</span>
+          <div class="avatar">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <!-- User Info Card -->
+        <div class="card user-info">
+          <h3><i class="fas fa-user-circle"></i> User Information</h3>
+          <div id="userData"></div>
+        </div>
+
+        <!-- Pet Card -->
+        <div class="card pet-card">
+          <h3><i class="fas fa-paw"></i> Your Pet Companion</h3>
+          <div id="petData"></div>
+          <div class="pet-actions">
+            <button class="btn feed-btn"><i class="fas fa-utensils"></i> Feed</button>
+            <button class="btn play-btn"><i class="fas fa-gamepad"></i> Play</button>
+            <button class="btn care-btn"><i class="fas fa-heart"></i> Care</button>
+          </div>
+        </div>
+
+        <!-- Stats Card -->
+        <div class="card stats-card">
+          <h3><i class="fas fa-chart-pie"></i> Pet Stats</h3>
+          <div class="stats-container">
+            <div class="stat-item">
+              <div class="stat-circle hunger-stat">
+                <span id="hunger-value">50</span>%
+              </div>
+              <p>Hunger</p>
+            </div>
+            <div class="stat-item">
+              <div class="stat-circle happiness-stat">
+                <span id="happiness-value">75</span>%
+              </div>
+              <p>Happiness</p>
+            </div>
+            <div class="stat-item">
+              <div class="stat-circle energy-stat">
+                <span id="energy-value">60</span>%
+              </div>
+              <p>Energy</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity Card -->
+        <div class="card activity-card">
+          <h3><i class="fas fa-history"></i> Recent Activity</h3>
+          <ul class="activity-list">
+            <li><i class="fas fa-utensils activity-icon"></i> Fed your pet 2 hours ago</li>
+            <li><i class="fas fa-gamepad activity-icon"></i> Played with your pet 5 hours ago</li>
+            <li><i class="fas fa-bed activity-icon"></i> Your pet went to sleep 8 hours ago</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
